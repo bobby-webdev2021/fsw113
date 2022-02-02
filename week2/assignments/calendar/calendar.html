@@ -8,7 +8,14 @@
     </head>
     <body>
         <div class='calendarWrapper'>
-            <div class='calendarTitle'></div>
+            <div class='calendarTitle'>
+                <h3 style="line-height: 2px">Perpetual Calendar</h3>
+            </div>
+            <div class='calendarTitle'>
+                <select id="monthSelect"></select>
+                <input id="yearInput" type="number" min="0"></input>
+                <button id="btnGo">Go!</button>
+            </div>
             <div class='calendar' id='calendarDays'></div>
         </div>
     </body>
