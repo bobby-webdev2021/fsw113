@@ -1,8 +1,14 @@
 // declare any necessary variables
-
+let queryType;
+let itemID;
 // define a function called 'fetchData()' that passes the values from 
 // the 'queryType' and 'itemID' elements in starwars.html to the function 
 // called 'getFromSWAPI()'
+function fetchData() {
+    queryType = document.querySelector("#queryType").value;
+    itemID = document.querySelector("#itemID").value;
+    getFromSWAPI(queryType, itemID);
+}
 
 function getFromSWAPI() {
     // assign values to any necessary variables
@@ -16,6 +22,15 @@ function getFromSWAPI() {
     .catch(function(err) {
         console.warn(err)
     })
+}
+
+function updateInfo(data) {
+    let keys = Object.keys(data);
+
+    document.querySelector("#dataLabel1").textContent = keys[0];
+    document.querySelector("#dataLabel2").textContent = keys[3];
+    document.querySelector("#dataValue1").textContent = data[keys[0]];
+    document.querySelector("#dataValue2").textContent = data[keys[3]];
 }
 
 // create a new function called 'updateInfo()' that receives the data from 
