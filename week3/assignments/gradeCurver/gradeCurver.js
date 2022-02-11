@@ -52,6 +52,6 @@ function curveGrades() {
     gradeSlice = (maxGrade - minGrade) / 5;
     aryGrades.forEach(applyBell);
     document.querySelector("#grades").textContent = aryGrades.join(",");
-}
+} 
 
 // write the value of aryGrades to the grades div in the HTML document
