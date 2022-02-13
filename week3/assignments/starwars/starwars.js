@@ -27,8 +27,8 @@ function getFromSWAPI() {
 function updateInfo(data) {
     let keys = Object.keys(data);
 
-    document.querySelector("#dataLabel1").textContent = keys[0];
-    document.querySelector("#dataLabel2").textContent = keys[3];
+    document.querySelector("#dataLabel1").textContent = keys[0].replace("_"," ");
+    document.querySelector("#dataLabel2").textContent = keys[3].replace("_"," ");
     document.querySelector("#dataValue1").textContent = data[keys[0]];
     document.querySelector("#dataValue2").textContent = data[keys[3]];
 }
